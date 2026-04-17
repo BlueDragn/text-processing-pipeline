@@ -1,6 +1,6 @@
 ## Date: April 17
 
-### Session
+### Session 01
 
 Text cleaner Implementation
 
@@ -22,3 +22,34 @@ Build a text cleaning module for preprocessing raw text
 ### Next Step
 
  Implement tokenizer module
+
+---
+---
+
+### Session 02
+
+Tokenizer and  Skill  EXtraction module
+
+### Objective
+
+Convert cleaned text into tokens and extract skills using controlled vocabulary.
+
+### Work done
+
+- Implement tokenizer using whitespace splitting
+- Handled edge cases(empty input, None)
+- Built skills extraction using  
+   1. token matching (single-word skills)  
+   2. phrase matching (multi-word skills)
+- Used set to remove duplicates
+- Ensured consistent output as list
+
+### Observation
+
+- Tokenizer depends on properly cleaned text
+- Skill extraction depends on predefined skills_db
+- Matching fails if input is not normalized (case sensitivity)
+
+### Next Step
+
+Entity extraction (name, email, experience, role)
