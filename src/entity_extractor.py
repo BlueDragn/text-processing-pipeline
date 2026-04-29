@@ -1,24 +1,23 @@
+import re
+
+
 text = "john doe email john.doe@example.com has 3+ years of experience in python programming. contact +1 234 567 8901"
 
-current_number = ""
-for char in text:
-    if char.isdigit():
-        current_number += char
 
-    elif char in " -" and current_number:
-        current_number += char
-    else:
-        if current_number:
-            current_number = current_number.replace(" ", "")
-            if len(current_number) == 10:
-                    print("Phone number found:", current_number)
-            current_number = ""
+# extract_email(text)
+
+# extract_experience_years(text)
+# extract_roles(text)
 
 
 
+def extract_phone_number(text):
+    # Define a regex pattern for phone numbers
+    pattern = re.compile(r"\d+\s+\d+\s+\d+\s+\d+")
+    return pattern.findall(text)
 
-print(current_number)
 
 
+print(extract_phone_number(text))
 
 
