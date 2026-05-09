@@ -51,4 +51,3 @@ def extract_skills(cleaned_text,tokens):
     return list(matched_skills)
 
 
-print(extract_skills("john playing football and music", ["football","music"]))

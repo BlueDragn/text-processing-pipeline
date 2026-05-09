@@ -21,4 +21,3 @@ profile = build_profile(
     ["Python", "JavaScript"],
     ["Developer", "Engineer"]
 )
-print(profile)

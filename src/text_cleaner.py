@@ -20,5 +20,3 @@ def clean_text(text):
 if __name__ == "__main__":
     sample_text = "John doe !!! Email:john.doe@example.com has 3+ years of experience in Python programming. Contact: +1-234-567-8901"
 
-    cleaned_text = clean_text(sample_text)
-    print(cleaned_text)

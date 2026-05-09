@@ -1,8 +1,5 @@
 import re
 
-
-text = "john doe email john.doe@example.com has 3+ years of experience in python programming. contact +1 234 567 8901"
-
 # Extract email
 def extract_email(text):
     pattern = r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]+"
@@ -39,4 +36,4 @@ def extract_entities(text, tokens):
     }
 
 
-print(extract_entities(text, []))
+

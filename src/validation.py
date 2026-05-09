@@ -20,7 +20,3 @@ def validate_experience_years(experience):
         if 0 <= years <= 50:
             return True
     return False
-
-print(validate_email("test@example.com"))
-print(validate_phone_number("123-456-7890"))
-print(validate_experience_years("5 years of experience"))
