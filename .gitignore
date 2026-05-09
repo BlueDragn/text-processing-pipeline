@@ -6,4 +6,4 @@ data/processed/*
 models/*
 logs/*
 notebooks/*
-```
+venv/

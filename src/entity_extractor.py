@@ -3,21 +3,40 @@ import re
 
 text = "john doe email john.doe@example.com has 3+ years of experience in python programming. contact +1 234 567 8901"
 
+# Extract email
+def extract_email(text):
+    pattern = r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]+"
+    return re.findall(pattern, text)
 
-# extract_email(text)
+#Extract phone number
+def extract_phone_number(text):
+    pattern = r"(?:\+\d{1,3}\s)?\d+\s+\d+\s?\d+"
+    return re.findall(pattern, text)
 
 # extract_experience_years(text)
+def extract_experience_years(text):
+    pattern = r"\d\+?\s+years?"
+    return re.findall(pattern, text)
+
 # extract_roles(text)
+roles_db = ["data scientist", "machine learning engineer", "software developer", "python programmer","backend developer"]
+def extract_roles(text):
+    text = text.lower()
+    extracted_roles = []
+    for role in roles_db:
+        if role in text:
+            extracted_roles.append(role)
+    return extracted_roles
 
 
 
-def extract_phone_number(text):
-    # Define a regex pattern for phone numbers
-    pattern = re.compile(r"\d+\s+\d+\s+\d+\s+\d+")
-    return pattern.findall(text)
+def extract_entities(text, tokens):
+    return{
+        "email": extract_email(text),
+        "phone_number": extract_phone_number(text),
+        "experience_years": extract_experience_years(text),
+        "roles": extract_roles(text)
+    }
 
 
-
-print(extract_phone_number(text))
-
-
+print(extract_entities(text, []))

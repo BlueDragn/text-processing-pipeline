@@ -8,4 +8,3 @@ def tokenize_text(text):
     return tokens
 
 
-print(tokenize_text(None))
