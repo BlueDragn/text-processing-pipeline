@@ -4,6 +4,7 @@ def tokenize_text(text):
 
     # Split the text into tokens based on whitespace
     tokens = text.split()
+    tokens = [token.strip(".,!?") for token in tokens]  # Remove punctuation
 
     return tokens
 
