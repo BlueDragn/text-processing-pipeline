@@ -17,16 +17,16 @@ phone: +1 234 567 8901
 """
 
 cleaned_text = clean_text(text)
-print("Cleaned Text:", cleaned_text)
+
 
 tokens = tokenize_text(cleaned_text)
-print("Tokens:", tokens)
+
 
 entities = extract_entities(cleaned_text, tokens)
-print("Entities:", entities)
+
 
 skills = extract_skills(cleaned_text, tokens)
-print("Skills:", skills)
+
 
 email = entities["email"]
 phone = entities["phone_number"]
@@ -36,16 +36,16 @@ roles = entities["roles"]
 valid_email = [
     e for e in email if validate_email(e)
 ]
-print("Valid Emails:", valid_email)
+
 valid_phone = [
     p for p in phone if validate_phone_number(p)
 ]
-print("Valid Phones:", valid_phone)
+
 
 valid_experience = [
     exp for exp in experience_years if validate_experience_years(exp)
 ]
-print("Valid Experience Years:", valid_experience)
+
 
 profile = build_profile(
     valid_email,
