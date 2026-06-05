@@ -12,7 +12,7 @@ def extract_phone_number(text):
 
 # extract_experience_years(text)
 def extract_experience_years(text):
-    pattern = r"\d\+?\s+years?"
+    pattern = r"\d+\+?\s+years?"
     return re.findall(pattern, text)
 
 # extract_roles(text)
